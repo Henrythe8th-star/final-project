@@ -1,0 +1,42 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+
+int pin1 = 7;
+int pin2 = 8;
+int pin3 = 9;
+
+void setup() {
+  pinMode(pin1,INPUT);
+  pinMode(pin2, INPUT);
+  pinMode(pin3, INPUT);
+}
+
+void loop() {
+  int button1 = digitalRead(pin1);
+  int button2 = digitalRead(pin2);
+  int button3 = digitalRead(pin3);
+
+  lcd.setCursor(0,0);
+  
+    if(button1 == HIGH) {
+      lcd.print("            ");
+      lcd.setCursor(0,0);
+      lcd.print("girls");
+      delay(200);
+    }
+    
+    if(button2 == HIGH) {
+      lcd.print("            ");
+      lcd.setCursor(0,0);
+      lcd.print("who");
+      delay(200);
+    }
+    
+    if(button3 == HIGH) {
+      lcd.print("            ");
+      lcd.setCursor(0,0);
+      lcd.print("code");
+      delay(200);
+    }
+}
